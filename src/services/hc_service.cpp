@@ -2,21 +2,21 @@
 #include "../config/app_config.h"
 
 void HcService::begin() {
-    pinMode(NIVEL_TRIG, OUTPUT);
-    pinMode(NIVEL_ECHO, INPUT);
-    digitalWrite(NIVEL_TRIG, LOW);
+    pinMode(HC_TRIG, OUTPUT);
+    pinMode(HC_ECHO, INPUT);
+    digitalWrite(HC_TRIG, LOW);
 }
 
 HcData HcService::read() {
     // Pulso de trigger (10us)
-    digitalWrite(NIVEL_TRIG, LOW);
+    digitalWrite(HC_TRIG, LOW);
     delayMicroseconds(2);
-    digitalWrite(NIVEL_TRIG, HIGH);
+    digitalWrite(HC_TRIG, HIGH);
     delayMicroseconds(10);
-    digitalWrite(NIVEL_TRIG, LOW);
+    digitalWrite(HC_TRIG, LOW);
 
     // Leitura do echo (timeout para segurança)
-    unsigned long duration = pulseIn(NIVEL_ECHO, HIGH, 30000UL); // ~5m
+    unsigned long duration = pulseIn(HC_ECHO, HIGH, 30000UL); // ~5m
 
     if (duration == 0) {
         lastData.valid = false;

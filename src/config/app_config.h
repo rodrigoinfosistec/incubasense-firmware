@@ -29,15 +29,13 @@
 #define OLED_SCL 22
 #define OLED_ADDR 0x3C
 
-// Sensor DHT de Temperatura e umidade relativa do ar
-// 22 - SIMULATION = true
-// 11 - SIMULATION = false
+// Sensor DHT22 de Temperatura e umidade relativa do ar
 // Utiliza apenas SDA
 // NC inutilizado
-#define TEMPUMID 15
+#define DHT 15
 
-// Sensor HC de distância (SR04)
+// Sensor HC-SR04 de distância
 // 22 - desenvolvimento
 // 11 - físico
-#define NIVEL_TRIG 4
-#define NIVEL_ECHO 5
+#define HC_TRIG 4
+#define HC_ECHO 5

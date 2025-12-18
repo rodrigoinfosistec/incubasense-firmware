@@ -3,13 +3,9 @@
 
 #include <DHT.h>
 
-#if SIMULATION
-  #define DHT_TYPE DHT22
-#else
-  #define DHT_TYPE DHT11
-#endif
+#define DHT_TYPE DHT22
 
-static DHT dht(TEMPUMID, DHT_TYPE);
+static DHT dht(DHT, DHT_TYPE);
 
 void DhtService::begin() {
     dht.begin();
