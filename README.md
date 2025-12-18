@@ -36,10 +36,10 @@ O sistema monitora **temperatura, umidade e nível**, aplica **planos de incuba�
 O projeto segue uma separação clara de responsabilidades:
 
 src/
-├── core/ # enums e estruturas centrais
-├── services/ # serviços (Wi-Fi, Firebase, sensores, display, etc.)
-├── config/ # configurações gerais do sistema
-└── main.cpp # orquestrador e máquina de estados
+├── core/         # enums e estruturas centrais
+├── services/     # serviços (Wi-Fi, Firebase, sensores, display, etc.)
+├── config/       # configurações gerais do sistema
+└── main.cpp      # orquestrador e máquina de estados
 
 
 A `main` atua apenas como **orquestradora**, delegando toda a lógica específica para serviços dedicados.
