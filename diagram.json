@@ -63,7 +63,7 @@
       "top": 224.2,
       "left": -29.65,
       "rotate": 270,
-      "attrs": { "value": "1000" }
+      "attrs": { "value": "100" }
     },
     {
       "type": "wokwi-pushbutton-6mm",

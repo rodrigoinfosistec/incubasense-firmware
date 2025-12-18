@@ -32,7 +32,7 @@
 // Sensor DHT22 de Temperatura e umidade relativa do ar
 // Utiliza apenas SDA
 // NC inutilizado
-#define DHT 15
+#define DHT_22 15
 
 // Sensor HC-SR04 de distância
 // 22 - desenvolvimento

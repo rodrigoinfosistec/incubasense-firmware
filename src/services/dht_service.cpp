@@ -5,7 +5,7 @@
 
 #define DHT_TYPE DHT22
 
-static DHT dht(DHT, DHT_TYPE);
+static DHT dht(DHT_22, DHT_TYPE);
 
 void DhtService::begin() {
     dht.begin();
