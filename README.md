@@ -2,7 +2,7 @@
 
 IncubaSense é um projeto de **chocadeira inteligente baseada em ESP32**, desenvolvido com foco em **arquitetura limpa, lógica não bloqueante e integração em tempo real com Firebase**.
 
-O sistema monitora **temperatura, umidade e nível**, aplica **planos de incubação**, exibe informações em **display OLED** e emite **alertas visuais e sonoros**, com controle total via firmware.
+O sistema monitora **temperatura, umidade e nível**, aplica **planos de incubação**,  exibe informações em **display OLED** e emite **alertas visuais e sonoros**, com controle total via firmware.
 
 ---
 
