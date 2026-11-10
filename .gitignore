@@ -1,2 +1,3 @@
 .pio/
 .vscode/
+src/config/firebase_config.h
