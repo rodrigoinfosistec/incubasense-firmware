@@ -103,7 +103,7 @@ As configurações de Wi-Fi e Firebase ficam centralizadas nos arquivos da pasta
 
 ## 📌 Status do Projeto
 
-✔️ **Baseline estável (v1.0)**  
+✔️ **Baseline estável (v2.0)**  
 ✔️ Funcional e validado em firmware  
 ✔️ Pronto para evolução (watchdog, FreeRTOS, app mobile, etc.)
 
