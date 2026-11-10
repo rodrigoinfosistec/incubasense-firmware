@@ -35,18 +35,11 @@ O sistema monitora **temperatura, umidade e nível**, aplica **planos de incuba�
 
 O projeto segue uma separação clara de responsabilidades:
 
-- src/
-
-- core/: Enums e estruturas centrais.
-
-- services/: Serviços (Wi-Fi, Firebase, sensores, display, etc.).
-
-- config/: Configurações gerais do sistema.
-
-- main.cpp: Orquestrador e máquina de estados.
-
-- Arquitetura: A main atua apenas como orquestradora, delegando toda a lógica específica para serviços dedicados.
-
+- `src/`
+  - `core/`: enums e estruturas centrais
+  - `services/`: serviços (Wi-Fi, Firebase, sensores, display, etc.)
+  - `config/`: configurações gerais do sistema
+  - `main.cpp`: orquestrador e máquina de estados
 
 A `main` atua apenas como **orquestradora**, delegando toda a lógica específica para serviços dedicados.
 
@@ -87,17 +80,29 @@ Isso permite simulação completa diretamente no VS Code.
 ## 📦 Build e Upload
 
 1. Abra o projeto no VS Code
-2. Compile com PlatformIO
-3. Faça o upload para o ESP32
-4. Configure Wi-Fi e Firebase em `config/`
+2. Crie o arquivo de configuração do Firebase (veja a seção abaixo)
+3. Compile com PlatformIO
+4. Faça o upload para o ESP32
 
 ---
 
-## 🔐 Observação sobre Credenciais
+## 🔐 Configuração e Credenciais
 
-As configurações de Wi-Fi e Firebase ficam centralizadas nos arquivos da pasta `config/`.
+O arquivo real com as credenciais do Firebase **não é versionado** (está no `.gitignore`). O repositório traz apenas um modelo com os campos vazios.
 
-⚠️ **Não versionar tokens sensíveis em repositórios públicos.**
+Para configurar:
+
+1. Copie o modelo para o arquivo real:
+
+   ```powershell
+   Copy-Item src\config\firebase_config.example.h src\config\firebase_config.h
+   ```
+
+2. Abra `src/config/firebase_config.h` e preencha `DATABASE_URL` e `DATABASE_SECRET` com os dados do seu projeto Firebase.
+
+Sem esse arquivo, a compilação falha por não encontrar `firebase_config.h`.
+
+⚠️ **Nunca faça commit de tokens, senhas ou chaves em repositórios públicos.**
 
 ---
 
